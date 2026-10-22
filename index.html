@@ -237,7 +237,6 @@
       </p>
 
       <div class="destacado">
-        <strong>Versión del firmware:</strong> 2.0-analizando
         <br>
         <strong>Documento:</strong> Información general del equipo
         <br>
@@ -266,85 +265,77 @@
     </section>
 
     <section id="componentes">
-      <h2>Partes y componentes</h2>
-      <p>Estos son los principales elementos que conforman el equipo:</p>
+      <h2>Encendido y estabilización</h2>
+        <p>Importante: no conecte ni desconecte módulos con el equipo energizado. No cambie la alimentación del servo sin confirmar la tensión y corriente permitidas por su modelo.</p>
 
       <div class="rejilla">
         <article class="tarjeta">
           <span class="numero">1</span>
-          <h3>ESP32-C3 Super Mini</h3>
-          <p>Microcontrolador encargado del procesamiento y control electrónico.</p>
+          <p>Coloque el equipo sobre una superficie estable, nivelada y sin vibraciones.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">2</span>
-          <h3>Celda de carga</h3>
-          <p>Sensor que detecta la carga aplicada sobre la plataforma.</p>
+          <p>Compruebe visualmente que la celda, la plataforma y la tolva estén firmes..</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">3</span>
-          <h3>Tolva y plataforma</h3>
-          <p>Estructura que recibe y soporta la carga durante la medición.</p>
+          <p>Verifique que la tolva no toque paredes, cables ni otros objetos.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">4</span>
-          <h3>Módulo HX711</h3>
-          <p>Interfaz electrónica que acondiciona y convierte la señal de la celda de carga.</p>
+          <p>Revise que los cables estén sujetos y no ejerzan fuerza sobre la celda.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">5</span>
-          <h3>Pantalla OLED SSD1306</h3>
-          <p>Interfaz visual para mostrar mensajes e información del sistema.</p>
+          <p>Encienda el equipo con el método de alimentación aprobado para la instalación.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">6</span>
-          <h3>Botones táctiles</h3>
-          <p>Controles de interacción identificados como OK y SERVO.</p>
+          <p>Espere entre 3 y 5 minutos para que la lectura se estabilice.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">7</span>
-          <h3>Servomotor</h3>
-          <p>Actuador electromecánico del sistema, sujeto a las especificaciones de su modelo.</p>
+          <p>No apoye las manos sobre la plataforma ni mueva el equipo durante la preparación.</p>
         </article>
 
         <article class="tarjeta">
           <span class="numero">8</span>
-          <h3>LED RGB WS2812</h3>
-          <p>Indicador luminoso para comunicar estados del equipo.</p>
-        </article>
-
-        <article class="tarjeta">
-          <span class="numero">9</span>
-          <h3>Fuente y cableado</h3>
-          <p>Elementos que suministran energía y permiten la conexión de los módulos.</p>
+          <p>La tolva debe estar completamente vacía al iniciar la tara.</p>
         </article>
       </div>
     </section>
 
     <section id="seguridad">
-      <h2>Precauciones generales</h2>
+      <h2>Procedimiento de conteo</h2>
 
       <div class="aviso">
         <h3>Importante</h3>
         <ul>
-          <li>Utilizar el equipo únicamente en condiciones evaluadas y autorizadas.</li>
-          <li>Colocarlo sobre una superficie estable, nivelada y sin vibraciones.</li>
-          <li>Inspeccionar visualmente la estructura, las conexiones y el cableado.</li>
-          <li>No conectar ni desconectar módulos mientras el equipo esté energizado.</li>
-          <li>Confirmar la compatibilidad eléctrica de los componentes con sus especificaciones técnicas.</li>
-          <li>Ante una falla, suspender el uso y solicitar la revisión de personal competente.</li>
+          <li>INICIAR: al encender, la pantalla solicita tocar OK y el LED parpadea en azul.</li>
+          <li>Preparar la tara: toque el botón OK una vez. El equipo entra en PREPARANDO y muestra una cuenta regresiva de 10 segundos.</li>
+          <li>Mantener vacío: durante esos 10 segundos, no coloque unidades ni toque la tolva. El equipo calcula la referencia de la base vacía.</li>
+          <li>Confirmar LISTO: si la lectura es válida, el LED queda verde y aparece OK LISTO / Ponga cartuchos+OK.</li>
+          <li>Colocar la carga: deposite cuidadosamente las unidades que desea contar, sin golpear ni mover la tolva.</li>
+          <li>Iniciar medición: toque OK una vez. El equipo toma la lectura y calcula un resultado estimado.</li>
+          <li>Esperar el análisis: la pantalla presenta ANALIZANDO. El número permanece oculto durante esta etapa.</li>
+          <li>Accionar el servo: toque SERVO una vez. El servo pasa de 180° a 45° y el LED indica la actuación con color naranja.</li>
+          <li>Esperar el retorno: espere aproximadamente 5 segundos de retención; el servo vuelve a 180°.</li>
+          <li>Leer el resultado: cuando el servo regresa a reposo, la pantalla muestra la cantidad calculada.</li>
+          <li>Finalizar o repetir: para iniciar un nuevo ciclo, toque OK desde el estado del resultado y siga de nuevo el procedimiento desde INICIO.</li>
+
         </ul>
       </div>
 
       <p>
-        Esta página es de carácter informativo. No sustituye la
-        documentación técnica aprobada, la capacitación ni los
-        procedimientos de seguridad aplicables.
+El tiempo total depende de la estabilización y de la interacción del operador. 
+La preparación de tara dura 10 segundos y el ciclo del servo mantiene una espera de 5 segundos; 
+no se debe asumir que el ciclo completo siempre dura exactamente 15 segundos.
       </p>
     </section>
 
@@ -353,7 +344,6 @@
       <ul class="datos">
         <li><strong>GN2:</strong> Sierra Mena Andrés Felipe</li>
         <li><strong>GN2:</strong> Soto Ibarra Cristiam Gerard David</li>
-        <li><strong>Firmware declarado:</strong> 2.0-analizando</li>
       </ul>
       <p>
         Para consultas técnicas, acudir al responsable autorizado
