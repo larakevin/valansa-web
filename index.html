@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082b49">
+  <meta name="description" content="Página informativa del equipo electrónico VALANSA, Contador de Cartuchos.">
+  <title>VALANSA | Contador de Cartuchos</title>
+
+  <style>
+    :root {
+      --azul: #082b49;
+      --azul2: #10466c;
+      --dorado: #e5b34b;
+      --fondo: #f2f5f8;
+      --texto: #243447;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--azul), var(--azul2));
+      color: var(--blanco);
+      padding: 42px 20px;
+      text-align: center;
+      border-bottom: 5px solid var(--dorado);
+    }
+
+    .marca {
+      color: var(--dorado);
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #e5edf5;
+    }
+
+    nav {
+      background: var(--blanco);
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      box-shadow: 0 2px 8px #00000012;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--azul);
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      border-radius: 7px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background: #e8eef4;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+
+    section {
+      background: var(--blanco);
+      padding: clamp(20px, 4vw, 32px);
+      margin-bottom: 22px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px #082b4910;
+      scroll-margin-top: 90px;
+    }
+
+    h2 {
+      color: var(--azul);
+      font-size: 1.55rem;
+      margin-bottom: 14px;
+      border-left: 5px solid var(--dorado);
+      padding-left: 12px;
+    }
+
+    h3 {
+      color: var(--azul2);
+      margin-bottom: 6px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    .destacado {
+      background: #edf3f8;
+      border-radius: 10px;
+      padding: 18px;
+      border-left: 4px solid var(--azul2);
+    }
+
+    .rejilla {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .tarjeta {
+      background: #f7f9fb;
+      border: 1px solid #e0e7ee;
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    .numero {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--azul);
+      color: white;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .aviso {
+      background: #fff7e5;
+      border: 1px solid #eed18c;
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    .aviso h3 {
+      color: #77520b;
+    }
+
+    .datos {
+      list-style: none;
+    }
+
+    .datos li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e6ebf0;
+    }
+
+    .datos li:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      background: var(--azul);
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 4px solid var(--dorado);
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 32px 16px;
+      }
+
+      nav a {
+        font-size: 0.82rem;
+        padding: 7px 9px;
+      }
+
+      section {
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="marca">PROYECTO TECNOLÓGICO</div>
+    <h1>VALANSA</h1>
+    <p>Contador de Cartuchos</p>
+    <p>Información general del equipo electrónico y sus componentes</p>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#descripcion">Descripción</a>
+    <a href="#componentes">Componentes</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="#responsables">Responsables</a>
+  </nav>
+
+  <main>
+
+    <section id="inicio">
+      <h2>Bienvenido a VALANSA</h2>
+      <p>
+        Esta página presenta información general sobre VALANSA,
+        un equipo electrónico desarrollado para estimar cantidades
+        a partir de mediciones de peso.
+      </p>
+
+      <div class="destacado">
+        <strong>Versión del firmware:</strong> 2.0-analizando
+        <br>
+        <strong>Documento:</strong> Información general del equipo
+        <br>
+        <strong>Dirigido a:</strong> Personal autorizado
+      </div>
+    </section>
+
+    <section id="descripcion">
+      <h2>Descripción del equipo</h2>
+      <p>
+        VALANSA integra sensores de peso, procesamiento electrónico
+        y una interfaz visual para presentar información al operador.
+        Su arquitectura incluye una celda de carga, un módulo HX711
+        y un microcontrolador ESP32-C3.
+      </p>
+      <p>
+        La pantalla OLED permite presentar mensajes del sistema,
+        mientras que los indicadores luminosos comunican estados
+        generales del equipo.
+      </p>
+      <p>
+        La exactitud de las mediciones depende de la calibración,
+        el montaje, las condiciones ambientales y las características
+        de los elementos evaluados.
+      </p>
+    </section>
+
+    <section id="componentes">
+      <h2>Partes y componentes</h2>
+      <p>Estos son los principales elementos que conforman el equipo:</p>
+
+      <div class="rejilla">
+        <article class="tarjeta">
+          <span class="numero">1</span>
+          <h3>ESP32-C3 Super Mini</h3>
+          <p>Microcontrolador encargado del procesamiento y control electrónico.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">2</span>
+          <h3>Celda de carga</h3>
+          <p>Sensor que detecta la carga aplicada sobre la plataforma.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">3</span>
+          <h3>Tolva y plataforma</h3>
+          <p>Estructura que recibe y soporta la carga durante la medición.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">4</span>
+          <h3>Módulo HX711</h3>
+          <p>Interfaz electrónica que acondiciona y convierte la señal de la celda de carga.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">5</span>
+          <h3>Pantalla OLED SSD1306</h3>
+          <p>Interfaz visual para mostrar mensajes e información del sistema.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">6</span>
+          <h3>Botones táctiles</h3>
+          <p>Controles de interacción identificados como OK y SERVO.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">7</span>
+          <h3>Servomotor</h3>
+          <p>Actuador electromecánico del sistema, sujeto a las especificaciones de su modelo.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">8</span>
+          <h3>LED RGB WS2812</h3>
+          <p>Indicador luminoso para comunicar estados del equipo.</p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">9</span>
+          <h3>Fuente y cableado</h3>
+          <p>Elementos que suministran energía y permiten la conexión de los módulos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="seguridad">
+      <h2>Precauciones generales</h2>
+
+      <div class="aviso">
+        <h3>Importante</h3>
+        <ul>
+          <li>Utilizar el equipo únicamente en condiciones evaluadas y autorizadas.</li>
+          <li>Colocarlo sobre una superficie estable, nivelada y sin vibraciones.</li>
+          <li>Inspeccionar visualmente la estructura, las conexiones y el cableado.</li>
+          <li>No conectar ni desconectar módulos mientras el equipo esté energizado.</li>
+          <li>Confirmar la compatibilidad eléctrica de los componentes con sus especificaciones técnicas.</li>
+          <li>Ante una falla, suspender el uso y solicitar la revisión de personal competente.</li>
+        </ul>
+      </div>
+
+      <p>
+        Esta página es de carácter informativo. No sustituye la
+        documentación técnica aprobada, la capacitación ni los
+        procedimientos de seguridad aplicables.
+      </p>
+    </section>
+
+    <section id="responsables">
+      <h2>Responsables del proyecto</h2>
+      <ul class="datos">
+        <li><strong>GN2:</strong> Sierra Mena Andrés Felipe</li>
+        <li><strong>GN2:</strong> Soto Ibarra Cristiam Gerard David</li>
+        <li><strong>Firmware declarado:</strong> 2.0-analizando</li>
+      </ul>
+      <p>
+        Para consultas técnicas, acudir al responsable autorizado
+        del proyecto o de la instalación.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>VALANSA | Contador de Cartuchos</strong></p>
+    <p>Documento informativo del proyecto tecnológico</p>
+    <p>Diseño adaptable para teléfonos, tabletas y computadores.</p>
+  </footer>
+
+</body>
+</html>
